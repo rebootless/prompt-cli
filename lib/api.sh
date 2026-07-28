@@ -66,11 +66,11 @@ fetch_gemini() {
 
     trap 'kill "$pid" 2>/dev/null; rm -f "$tmpfile"; printf "\r\033[2K"; echo "Cancelled." >&2; exit 130' INT TERM
 
-    printf "%sAsking%s %s%s%s... " "$DIM" "$RESET" "$BOLD" "$ACCENT" "$model" "$RESET"
     while kill -0 "$pid" 2>/dev/null; do
-        printf "%s" "${spin:i++%${#spin}:1}"
+        printf "\r\033[2K%s%s%s %sAsking%s %s%s%s..." \
+            "$ACCENT" "${spin:i++%${#spin}:1}" "$RESET" \
+            "$DIM" "$RESET" "$BOLD$ACCENT" "$model" "$RESET"
         sleep 0.08
-        printf "\b"
     done
     wait "$pid" || status=$?
     trap - INT TERM
