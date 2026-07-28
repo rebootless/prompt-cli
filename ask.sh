@@ -22,8 +22,8 @@ check_deps() {
         command -v "$bin" &>/dev/null || missing+=("$bin")
     done
     if (( ${#missing[@]} > 0 )); then
-        echo "[!] Missing dependencies: ${missing[*]}" >&2
-        echo "    Re-run install.sh from the prompt-cli repo, or install them manually." >&2
+        echo "Missing dependencies: ${missing[*]}" >&2
+        echo "Re-run install.sh from the prompt-cli repo, or install them manually." >&2
         exit 1
     fi
 }
