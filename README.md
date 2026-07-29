@@ -8,7 +8,7 @@ Installed as `ask`.
 [![Debian](https://img.shields.io/badge/Debian-Supported-A81D33?logo=debian&logoColor=white)](https://www.debian.org)
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-Supported-E95420?logo=ubuntu&logoColor=white)](https://ubuntu.com)
 
-## Why this exists
+## Why This Exists
 
 A minimal way to query Google Gemini from the terminal without installing Node.js or a full agent.
 
@@ -65,7 +65,7 @@ ask --setup
 `ask` and `lib/` to `~/.local/lib/prompt-cli/`, symlinks `~/.local/bin/ask`,
 and adds `~/.local/bin` to `PATH` in `.bashrc` (idempotent marker block).
 
-## Getting an API key
+## Getting an API Key
 
 1. Open [Google AI Studio](https://aistudio.google.com/app/apikey)
 2. Sign in with a Google account
